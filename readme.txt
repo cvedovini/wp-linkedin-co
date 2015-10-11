@@ -4,9 +4,10 @@ Contributors: cvedovini
 Donate link: http://paypal.me/vdvn
 Tags: linkedin,resume,recommendations,profile,network updates,companies
 Tested up to: 4.3.1
-Stable tag: 1.5.1
+Stable tag: 1.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
 
 == Description ==
 
@@ -43,19 +44,9 @@ method](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins):
 
 1. Upload the `wp-linkedin-co` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Go to the plugin's settings page, enter your license key in the 'extensions'
-	tab and press the 'Save Changes' button
 
 
 == Changelog ==
-
-= Version 1.5.1 =
-- Small enhancement about the loading process
-- Small enhancements in error handling
-
-= Version 1.5 =
-- Making it easier to translate countries' name
-- Updating all translations with countries' name
 
 = Version 1.4 =
 - Better admin notices
