@@ -1,13 +1,12 @@
 <?php
 /*
 Plugin Name: WP LinkedIn for Companies
-Plugin URI: http://vdvn.me/pga
+Plugin URI: http://vedovini.net/plugins/?utm_source=wordpress&utm_medium=plugin&utm_campaign=wp-linkedin-co
 Description: This plugin enables you to display company's profiles.
 Author: Claude Vedovini
-Author URI: http://vdvn.me/
-Version: 1.5.1
+Author URI: http://vedovini.net/?utm_source=wordpress&utm_medium=plugin&utm_campaign=wp-linkedin-co
+Version: 1.1
 Text Domain: wp-linkedin-co
-Domain Path: /languages
 
 # The code in this plugin is free software; you can redistribute the code aspects of
 # the plugin and/or modify the code under the terms of the GNU Lesser General
@@ -25,14 +24,14 @@ Domain Path: /languages
 # See the GNU lesser General Public License for more details.
 */
 
-define('WP_LINKEDIN_CO_PLUGIN_VERSION', '1.5.1');
-define('WP_LINKEDIN_CO_PLUGIN_NAME', 'WP LinkedIn for Companies');
-define('WP_LINKEDIN_CO_DOWNLOAD_ID', 2151);
-define('WP_LINKEDIN_CO_PLUGIN_BASENAME', plugin_basename(__FILE__));
-
 define('LINKEDIN_CO_FIELDS_BASIC', 'id,name,website-url,logo-url,industries,employee-count-range');
 define('LINKEDIN_CO_FIELDS_DEFAULT', 'description,specialties,locations:(description,is-headquarters,address:(street1,street2,city,state,postal-code,country-code))');
 define('LINKEDIN_CO_FIELDS', get_option('wp-linkedin-co_fields', LINKEDIN_CO_FIELDS_DEFAULT));
+
+
+if (!defined('LINKEDIN_CO_FIELDS_PRODUCTS')) {
+	define('LINKEDIN_CO_FIELDS_PRODUCTS', 'id,name,logo-url,description,product-category,website-url,num-recommendations,recommendations:(recommender:(first-name,last-name,headline,public-profile-url,picture-url))');
+}
 
 if (!defined('WP_LINKEDIN_PROFILE_CACHE_TIMEOUT')) {
 	if (defined('WP_LINKEDIN_CACHETIMEOUT')) {
@@ -42,44 +41,31 @@ if (!defined('WP_LINKEDIN_PROFILE_CACHE_TIMEOUT')) {
 	}
 }
 
+include 'updater.php';
 include 'class-company-card-widget.php';
 include 'class-company-updates-widget.php';
-include 'class-admin.php';
 
-add_action('plugins_loaded', array('WPLinkedInCoPlugin', 'get_instance'));
 
 class WPLinkedInCoPlugin {
 
-	private static $instance;
-
-	public static function get_instance() {
-		if (!self::$instance) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
+	function WPLinkedInCoPlugin() {
+		add_action('init', array(&$this, 'init'));
+		add_action('widgets_init', array(&$this, 'widgets_init'));
+		add_action('admin_menu', array(&$this, 'admin_init'), 30);
 	}
 
-	function __construct() {
+	function init() {
 		// Make plugin available for translation
 		// Translations can be filed in the /languages/ directory
 		add_filter('load_textdomain_mofile', array(&$this, 'smarter_load_textdomain'), 10, 2);
 		load_plugin_textdomain('wp-linkedin-co', false, dirname(plugin_basename(__FILE__)) . '/languages/' );
-		add_action('init', array(&$this, 'init'));
-		add_action('widgets_init', array(&$this, 'widgets_init'));
-	}
 
-	function init() {
-		$this->admin = new WPLinkedInCoAdmin($this);
-		if (class_exists('VDVNPluginUpdater')) {
-			$this->updater = new VDVNPluginUpdater(__FILE__, WP_LINKEDIN_CO_PLUGIN_NAME,
-					WP_LINKEDIN_CO_PLUGIN_VERSION, WP_LINKEDIN_CO_DOWNLOAD_ID);
+		if (!is_admin()) {
+			add_shortcode('li_company_profile', 'wp_linkedin_company_profile');
+			add_shortcode('li_company_card', 'wp_linkedin_company_card');
+			add_shortcode('li_company_updates', 'wp_linkedin_company_updates');
+			add_shortcode('li_company_products', 'wp_linkedin_company_products');
 		}
-
-		add_filter('linkedin_scope', array(&$this, 'linkedin_scope'));
-		add_shortcode('li_company_profile', 'wp_linkedin_company_profile');
-		add_shortcode('li_company_card', 'wp_linkedin_company_card');
-		add_shortcode('li_company_updates', 'wp_linkedin_company_updates');
 	}
 
 	function smarter_load_textdomain($mofile, $domain) {
@@ -97,72 +83,108 @@ class WPLinkedInCoPlugin {
 		return $mofile;
 	}
 
-	function linkedin_scope($scope) {
-		$scope[] = 'rw_company_admin';
-		return $scope;
-	}
-
 	function widgets_init() {
 		register_widget('WPLinkedInCompanyCardWidget');
 		register_widget('WPLinkedInCompanyUpdatesWidget');
 	}
-}
 
-
-function wp_linkedin_get_company_admin() {
-	static $company_admin;
-
-	if (!isset($company_admin)) {
-		$linkedin = wp_linkedin_connection();
-		$company_admin = $linkedin->api_call('https://api.linkedin.com/v1/companies',
-				'', array('is-company-admin' => 'true'));
+	function admin_init() {
+		require_once 'class-admin.php';
+		$this->admin = new WPLinkedInCoAdmin($this);
 	}
 
-	if (is_wp_error($company_admin)) {
-		return $company_admin;
-	} else {
-		return $company_admin->values;
-	}
 }
 
 
 function wp_linkedin_get_company_profile($id, $options='id', $lang=LINKEDIN_PROFILELANGUAGE) {
 	$linkedin = wp_linkedin_connection();
-	$cache_key = 'profile_company_' . sha1($id.$options.$lang);
-	$profile = $linkedin->get_cache($cache_key);
+	if ($linkedin === false) return false;
 
-	if (!$profile) {
-		// No profile, let's try to fetch one.
-		$url = "https://api.linkedin.com/v1/companies/$id:($options)";
-		$profile = $linkedin->api_call($url, $lang);
+	$profile = false;
+	$cache_key = sha1($id.$options.$lang);
 
-		if (!is_wp_error($profile)) {
-			$linkedin->set_cache($cache_key, $profile);
-		}
+	$cache = $linkedin->get_cache('wp-linkedin_cache');
+	if (!is_array($cache)) $cache = array();
+
+	// Do we have an up-to-date profile?
+	if (isset($cache[$cache_key])) {
+		$expires = $cache[$cache_key]['expires'];
+		$profile = $cache[$cache_key]['profile'];
+		// If yes let's return it.
+		if (time() < $expires) return $profile;
 	}
 
-	return $profile;
+	// Else, let's try to fetch one.
+	$url = "https://api.linkedin.com/v1/companies/$id:($options)";
+	$fetched = $linkedin->api_call($url, $lang);
+
+	if (!is_wp_error($fetched)) {
+		$profile = $fetched;
+
+		$cache[$cache_key] = array(
+				'expires' => time() + WP_LINKEDIN_PROFILE_CACHE_TIMEOUT,
+				'profile' => $profile);
+		$linkedin->set_cache('wp-linkedin_cache', $cache);
+		return $profile;
+	} elseif ($profile) {
+		// If we cannot fetch one, let's return the outdated one if any.
+		return $profile;
+	} else {
+		// Else just return the error
+		return $fetched;
+	}
+}
+
+
+function wp_linkedin_get_company_products($id, $options=LINKEDIN_CO_FIELDS_PRODUCTS) {
+	$linkedin = wp_linkedin_connection();
+	if ($linkedin === false) return false;
+
+	$products = false;
+	$cache_key = sha1($id.$options);
+
+	$cache = $linkedin->get_cache('wp-linkedin_cache');
+	if (!is_array($cache)) $cache = array();
+
+	// Do we have up-to-date products?
+	if (isset($cache[$cache_key])) {
+		$expires = $cache[$cache_key]['expires'];
+		$products = $cache[$cache_key]['products'];
+		// If yes let's return it.
+		if (time() < $expires) return $products;
+	}
+
+	// Else, let's try to fetch them.
+	$url = "https://api.linkedin.com/v1/companies/$id/products:($options)";
+	$fetched = $linkedin->api_call($url);
+
+	if (!is_wp_error($fetched)) {
+		$products = $fetched;
+
+		$cache[$cache_key] = array(
+				'expires' => time() + WP_LINKEDIN_PROFILE_CACHE_TIMEOUT,
+				'products' => $products);
+		$linkedin->set_cache('wp-linkedin_cache', $cache);
+		return $products;
+	} elseif ($products) {
+		// If we cannot fetch one, let's return the outdated one if any.
+		return $products;
+	} else {
+		// Else just return the error
+		return $fetched;
+	}
 }
 
 
 function wp_linkedin_get_company_updates($id, $count=10, $start=0, $event_type=false) {
 	$linkedin = wp_linkedin_connection();
-	$cache_key = 'updates_company_' . sha1($id.$count.$start.$event_type);
-	$updates = $linkedin->get_cache($cache_key);
+	if ($linkedin === false) return false;
 
-	if (!$updates) {
-		// No updates, let's try to fetch one.
-		$url = "https://api.linkedin.com/v1/companies/$id/updates";
-		$params = array('start' => $start, 'count' => $count);
-		if ($event_type) $params['event-type'] = $event_type;
-		$updates = $linkedin->api_call($url, '', $params);
-
-		if (!is_wp_error($updates)) {
-			$linkedin->set_cache($cache_key, $updates);
-		}
-	}
-
-	return $updates;
+	// Else, let's try to fetch one.
+	$url = "https://api.linkedin.com/v1/companies/{$id}/updates";
+	$params = array('start' => $start, 'count' => $count);
+	if ($event_type) $params['event-type'] = $event_type;
+	return $linkedin->api_call($url, '', $params);
 }
 
 
@@ -178,7 +200,7 @@ function wp_linkedin_company_profile($atts) {
 	$profile = wp_linkedin_get_company_profile($id, $fields, $lang);
 
 	if (is_wp_error($profile)) {
-		return wp_linkedin_error($profile);
+		return wp_linkedin_error($profile->get_error_message());
 	} elseif ($profile && is_object($profile)) {
 		return wp_linkedin_load_template('company-profile',
 				array_merge($atts, array('profile' => $profile)), __FILE__);
@@ -199,7 +221,7 @@ function wp_linkedin_company_card($atts) {
 	$profile = wp_linkedin_get_company_profile($id, $fields, $lang);
 
 	if (is_wp_error($profile)) {
-		return wp_linkedin_error($profile);
+		return wp_linkedin_error($profile->get_error_message());
 	} elseif ($profile && is_object($profile)) {
 		return wp_linkedin_load_template('company-card',
 				array_merge($atts, array('profile' => $profile)), __FILE__);
@@ -219,7 +241,7 @@ function wp_linkedin_company_updates($atts) {
 	$updates = wp_linkedin_get_company_updates($id, $count, $start, $event_type);
 
 	if (is_wp_error($updates)) {
-		return wp_linkedin_error($updates);
+		return wp_linkedin_error($updates->get_error_message());
 	} elseif ($updates && is_object($updates)) {
 		return wp_linkedin_load_template('company-updates',
 				array_merge($atts, array('updates' => $updates)), __FILE__);
@@ -227,12 +249,64 @@ function wp_linkedin_company_updates($atts) {
 }
 
 
+function wp_linkedin_company_products($atts) {
+	$atts = shortcode_atts(array(
+			'id' => ''
+	), $atts, 'li_company_products');
+	extract($atts);
+
+	$products = wp_linkedin_get_company_products($id);
+
+	if (is_wp_error($products)) {
+		return wp_linkedin_error($products->get_error_message());
+	} elseif ($products && is_object($products)) {
+		return wp_linkedin_load_template('company-products',
+				array_merge($atts, array('products' => $products)), __FILE__);
+	}
+}
+
+
+function wp_linkedin_co_locate_template($template_names) {
+	$located = '';
+
+	foreach ((array)$template_names as $template_name) {
+		if ($template_name && is_readable($template_name)) {
+			$located = $template_name;
+			break;
+		}
+	}
+
+	return $located;
+}
+
+
 function wp_linkedin_co_get_country_name($code) {
 	static $languages;
 
 	if (!isset($languages)) {
-		$languages = require('countries.php');
+		$candidates = array();
+		$basedir = dirname(__FILE__) . '/languages';
+
+		if (defined('WPLANG')) {
+			$candidates[] = $basedir . '/country-' . WPLANG . '.php';
+			$candidates[] = WP_LANG_DIR . '/plugins/wp-linkedin-country-' . WPLANG . '.php';
+
+			if (strpos(WPLANG, '_')) {
+				$split = explode('_', WPLANG);
+				$candidates[] = $basedir . '/country-' . $split[0] . '.php';
+				$candidates[] = WP_LANG_DIR . '/plugins/wp-linkedin-country-' . $split[0] . '.php';
+			}
+		}
+
+		$candidates[] = $basedir . '/country.php';
+		$candidates[] = WP_LANG_DIR . '/plugins/wp-linkedin-country.php';
+
+		$template = wp_linkedin_co_locate_template($candidates);
+		$languages = require($template);
 	}
 
 	return $languages[strtoupper($code)];
 }
+
+global $the_wp_linked_co_plugin;
+$the_wp_linked_co_plugin = new WPLinkedInCoPlugin();
