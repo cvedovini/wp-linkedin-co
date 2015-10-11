@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WP LinkedIn for Companies package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-10-08 14:00:27+0000\n"
+"PO-Revision-Date: 2015-10-05 06:08:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -56,7 +56,7 @@ msgstr "Gâmbia"
 
 #: countries.php:86
 msgid "Georgia"
-msgstr "Geórgia"
+msgstr "Georgia"
 
 #: countries.php:87
 msgid "Germany"
@@ -1160,7 +1160,7 @@ msgstr "Sede"
 
 #: templates/company-updates.php:29
 msgid "No updates"
-msgstr "Não há actualizações"
+msgstr "Não há atualizações"
 
 #. Plugin Name of the plugin/theme
 msgid "WP LinkedIn for Companies"
