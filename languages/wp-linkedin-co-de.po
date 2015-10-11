@@ -2,17 +2,13 @@
 # This file is distributed under the same license as the WP LinkedIn for Companies package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-10-05 06:12:19+0000\n"
+"PO-Revision-Date: 2015-09-30 06:16:16+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/1.0-alpha-1100\n"
 "Project-Id-Version: WP LinkedIn for Companies\n"
-
-#: class-admin.php:36
-msgid "See the <a href=\"%s\" target=\"_blank\">LinkedIn API documentation</a> for the complete list of fields."
-msgstr "Siehe die <a href=\"%s\" target=\"_blank\">LinkedIn API Dokumentation</a> für eine vollständige Liste von Feldern."
 
 #: countries.php:76
 msgid "Faroe Islands"
@@ -1070,27 +1066,31 @@ msgstr "Kongo - Kinshasa"
 msgid "Cook Islands"
 msgstr "Cookinseln"
 
-#: class-admin.php:17
+#: class-admin.php:8
 msgid "Company fields"
 msgstr "Unternehmensfelder"
 
-#: class-admin.php:22
+#: class-admin.php:16
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: class-admin.php:34
+#: class-admin.php:28
 msgid "Comma separated list of fields to show on a company profile."
 msgstr "Kommagetrennte Liste von Feldern, auf einem Firmenprofil zeigen."
 
-#: class-admin.php:35
+#: class-admin.php:29
 msgid "You can overide this setting in the shortcode with the `fields` attribute."
 msgstr "Sie können diese Einstellung in der Shortcode mit dem Attribut `Felder vorgesehen overide."
 
-#: class-admin.php:43
+#: class-admin.php:30
+msgid "See the <a href=\"https://developer.linkedin.com/documents/company-lookup-api-and-fields\" target=\"_blank\">LinkedIn API documentation</a> for the complete list of fields."
+msgstr "Siehe die <a href=\"https://developer.linkedin.com/documents/company-lookup-api-and-fields\" target=\"_blank\">LinkedIn-API-Dokumentation</a> für eine vollständige Liste von Feldern."
+
+#: class-admin.php:36
 msgid "The WP LinkedIn for Companies plugin needs the WP LinkedIn plugin to be installed and activated."
 msgstr "Die WP LinkedIn für Firmen-Plugin benötigt die WP LinkedIn-Plugin installiert und aktiviert werden."
 
-#: class-admin.php:45
+#: class-admin.php:38
 msgid "The WP LinkedIn for Company plugin requires at least version %s of the WP-LinkedIn plugin, current installed version is %s"
 msgstr "Die WP LinkedIn für Unternehmen Plugin benötigt mindestens Version%s des WP-Plugin LinkedIn ist derzeit installierte Version%s"
 

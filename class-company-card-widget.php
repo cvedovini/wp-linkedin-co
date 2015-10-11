@@ -34,14 +34,29 @@ class WPLinkedInCompanyCardWidget extends WP_Widget {
 				'summary_length' => 200
 			));
 		$title = esc_attr($instance['title']);
-		$companies = wp_linkedin_get_company_admin();
+		$company_admin = wp_linkedin_get_company_admin();
+
+		if (!is_array($company_admin)) {
+			echo '<p class="error">An error has occured';
+			if ($company_admin) {
+				echo '<br>';
+				print_r($company_admin);
+			}
+			echo '</p>';
+			return;
+		}
 ?>
 <p>
 	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 </p>
 <p>
-	<?php $this->companies_dropdown(__('Company:', 'wp-linkedin-co'), $companies, $instance['id']); ?>
+	<label for="<?php echo $this->get_field_id('id'); ?>"><?php _e('Company:', 'wp-linkedin-co'); ?></label>
+	<select class="widefat" id="<?php echo $this->get_field_id('id'); ?>" name="<?php echo $this->get_field_name('id'); ?>">
+		<?php foreach ($company_admin as $company):?>
+		<option value="<?php echo $company->id; ?>" <?php selected($instance['id'], $company->id); ?>><?php echo $company->name; ?></option>
+		<?php endforeach; ?>
+	</select>
 </p>
 <p>
 	<label for="<?php echo $this->get_field_id('summary_length'); ?>"><?php _e('Max length of summary (in char):', 'wp-linkedin-co'); ?></label>
@@ -49,20 +64,6 @@ class WPLinkedInCompanyCardWidget extends WP_Widget {
 	<br/><small><em><?php _e('Specify \'0\' to hide the summary.', 'wp-linkedin-co'); ?></em></small>
 </p>
 <?php
-	}
-
-	function companies_dropdown($label, $companies, $selected) {
-		if (is_wp_error($companies)) {
-			$error = wp_linkedin_error($companies);
-			$company_admin = array();
-		} ?>
-		<label for="<?php echo $this->get_field_id('id'); ?>"><?php echo $label; ?></label>
-		<select class="widefat" id="<?php echo $this->get_field_id('id'); ?>" name="<?php echo $this->get_field_name('id'); ?>">
-			<?php foreach ($companies as $i => $company):?>
-			<option value="<?php echo $company->id; ?>" <?php selected($selected, $company->id); ?>><?php echo $company->name; ?></option>
-			<?php endforeach; ?>
-		</select><?php
-		if (!empty($error)) echo $error;
 	}
 
 	public function update($new_instance, $old_instance) {

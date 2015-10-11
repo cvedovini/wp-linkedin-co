@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WP LinkedIn for Companies package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP LinkedIn for Companies 1.5.1\n"
+"Project-Id-Version: WP LinkedIn for Companies 1.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wp-linkedin-co\n"
-"POT-Creation-Date: 2015-10-05 05:58:01+00:00\n"
+"POT-Creation-Date: 2015-09-30 05:44:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,36 +12,37 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: class-admin.php:17
+#: class-admin.php:8
 msgid "Company fields"
 msgstr ""
 
-#: class-admin.php:22
+#: class-admin.php:16
 msgid "Settings"
 msgstr ""
 
-#: class-admin.php:34
+#: class-admin.php:28
 msgid "Comma separated list of fields to show on a company profile."
 msgstr ""
 
-#: class-admin.php:35
+#: class-admin.php:29
 msgid ""
 "You can overide this setting in the shortcode with the `fields` attribute."
 msgstr ""
 
-#: class-admin.php:36
+#: class-admin.php:30
 msgid ""
-"See the <a href=\"%s\" target=\"_blank\">LinkedIn API documentation</a> for "
-"the complete list of fields."
+"See the <a href=\"https://developer.linkedin.com/documents/company-lookup-"
+"api-and-fields\" target=\"_blank\">LinkedIn API documentation</a> for the "
+"complete list of fields."
 msgstr ""
 
-#: class-admin.php:43
+#: class-admin.php:36
 msgid ""
 "The WP LinkedIn for Companies plugin needs the WP LinkedIn plugin to be "
 "installed and activated."
 msgstr ""
 
-#: class-admin.php:45
+#: class-admin.php:38
 msgid ""
 "The WP LinkedIn for Company plugin requires at least version %s of the WP-"
 "LinkedIn plugin, current installed version is %s"

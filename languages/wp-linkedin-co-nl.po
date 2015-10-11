@@ -2,17 +2,13 @@
 # This file is distributed under the same license as the WP LinkedIn for Companies package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-10-05 06:05:44+0000\n"
+"PO-Revision-Date: 2015-09-30 06:02:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/1.0-alpha-1100\n"
 "Project-Id-Version: WP LinkedIn for Companies\n"
-
-#: class-admin.php:36
-msgid "See the <a href=\"%s\" target=\"_blank\">LinkedIn API documentation</a> for the complete list of fields."
-msgstr "Kijk in de <a href=\"%s\" target=\"_blank\">LinkedIn API documentatie</a> voor de volledige lijst met velden."
 
 #: countries.php:76
 msgid "Faroe Islands"
@@ -1070,27 +1066,31 @@ msgstr "Congo - Kinshasa"
 msgid "Cook Islands"
 msgstr "Cook Eilanden"
 
-#: class-admin.php:17
+#: class-admin.php:8
 msgid "Company fields"
 msgstr "Bedrijf-velden"
 
-#: class-admin.php:22
+#: class-admin.php:16
 msgid "Settings"
 msgstr "Instellingen"
 
-#: class-admin.php:34
+#: class-admin.php:28
 msgid "Comma separated list of fields to show on a company profile."
 msgstr "Komma gescheiden lijst van velden om weer te geven op een bedrijfsprofiel."
 
-#: class-admin.php:35
+#: class-admin.php:29
 msgid "You can overide this setting in the shortcode with the `fields` attribute."
 msgstr "Je kunt deze instelling overschrijven in de shortcode met het attribuut `fields`."
 
-#: class-admin.php:43
+#: class-admin.php:30
+msgid "See the <a href=\"https://developer.linkedin.com/documents/company-lookup-api-and-fields\" target=\"_blank\">LinkedIn API documentation</a> for the complete list of fields."
+msgstr "Kijk in de <a href=\"https://developer.linkedin.com/documents/company-lookup-api-and-fields\" target=\"_blank\">LinkedIn API documentatie</a> voor de volledige lijst met velden."
+
+#: class-admin.php:36
 msgid "The WP LinkedIn for Companies plugin needs the WP LinkedIn plugin to be installed and activated."
 msgstr "De WP LinkedIn for Companies plug-in heeft de WP LinkedIn plug-in nodig om geïnstalleerd en geactiveerd te worden."
 
-#: class-admin.php:45
+#: class-admin.php:38
 msgid "The WP LinkedIn for Company plugin requires at least version %s of the WP-LinkedIn plugin, current installed version is %s"
 msgstr "De WP LinkedIn voor Company plugin vereist minimaal versie%s van de WP-LinkedIn plugin, de huidige geïnstalleerde versie is%s"
 

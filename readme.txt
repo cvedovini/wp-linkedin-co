@@ -4,9 +4,10 @@ Contributors: cvedovini
 Donate link: http://paypal.me/vdvn
 Tags: linkedin,resume,recommendations,profile,network updates,companies
 Tested up to: 4.3.1
-Stable tag: 1.5.1
+Stable tag: 1.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
 
 == Description ==
 
@@ -51,7 +52,6 @@ method](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins):
 
 = Version 1.5.1 =
 - Small enhancement about the loading process
-- Small enhancements in error handling
 
 = Version 1.5 =
 - Making it easier to translate countries' name
