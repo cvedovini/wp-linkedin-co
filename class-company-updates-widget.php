@@ -36,14 +36,16 @@ class WPLinkedInCompanyUpdatesWidget extends WP_Widget {
 				'event_type' => 'status-update'
 			));
 		$title = esc_attr($instance['title']);
-		$companies = wp_linkedin_get_company_admin();
+
 ?>
 <p>
 	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 </p>
 <p>
-	<?php $this->companies_dropdown(__('Company:', 'wp-linkedin-co'), $companies, $instance['id']); ?>
+	<label for="<?php echo $this->get_field_id('id'); ?>"><?php _e('Company ID:', 'wp-linkedin-co'); ?></label>
+	<input id="<?php echo $this->get_field_id('id'); ?>" name="<?php echo $this->get_field_name('id'); ?>" type="text" value="<?php echo $instance['id']; ?>" size="5" />
+	<br/><small><em><?php _e('The ID of the company is the number at the end of the URL of its LinkedIn page.', 'wp-linkedin-co'); ?></em></small>
 </p>
 <p>
 	<label for="<?php echo $this->get_field_id('count'); ?>"><?php _e('Number of updates to show:', 'wp-linkedin-co'); ?></label>
@@ -57,20 +59,6 @@ class WPLinkedInCompanyUpdatesWidget extends WP_Widget {
 	</select>
 </p>
 <?php
-	}
-
-	function companies_dropdown($label, $companies, $selected) {
-		if (is_wp_error($companies)) {
-			$error = wp_linkedin_error($companies);
-			$company_admin = array();
-		} ?>
-		<label for="<?php echo $this->get_field_id('id'); ?>"><?php echo $label; ?></label>
-		<select class="widefat" id="<?php echo $this->get_field_id('id'); ?>" name="<?php echo $this->get_field_name('id'); ?>">
-			<?php foreach ($companies as $company):?>
-			<option value="<?php echo $company->id; ?>" <?php selected($selected, $company->id); ?>><?php echo $company->name; ?></option>
-			<?php endforeach; ?>
-		</select><?php
-		if (!empty($error)) echo $error;
 	}
 
 	public function update($new_instance, $old_instance) {
