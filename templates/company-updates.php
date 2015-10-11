@@ -19,7 +19,7 @@ if (isset($update->updateContent->companyJobUpdate)) {
 	# New job postings on LinkedIn by the specified company.
 	$job = $update->updateContent->companyJobUpdate->job; ?>
 	<li class="type-CMPY"><a
-		href="<?php echo esc_url($job->siteJobRequest->url); ?>"><?php echo $job->position->title; ?></a> -
+		href="<?php echo $job->siteJobRequest->url; ?>"><?php echo $job->position->title; ?></a> -
 		<?php echo $job->locationDescription; ?></li><?php
 }
 ?>
