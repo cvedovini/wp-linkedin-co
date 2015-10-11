@@ -9,17 +9,22 @@ if (!function_exists('find_links')) {
 if (!empty($updates->values)): ?>
 <div class="linkedin"><ul class="updates">
 <?php foreach ($updates->values as $update):
+?>
+<!--
+<?php var_dump($update); ?>
+-->
+<?php
 if (isset($update->updateContent->companyStatusUpdate)) {
 	# An update on the company's status or content shared by the company.
 	$share = $update->updateContent->companyStatusUpdate->share; ?>
-	<li class="type-CMPY"><?php echo find_links($share->comment); ?></li><?php
+	<li class="type-<?php strtolower($update->updateType); ?>"><?php echo find_links($share->comment); ?></li><?php
 }
 
 if (isset($update->updateContent->companyJobUpdate)) {
 	# New job postings on LinkedIn by the specified company.
 	$job = $update->updateContent->companyJobUpdate->job; ?>
-	<li class="type-CMPY"><a
-		href="<?php echo esc_url($job->siteJobRequest->url); ?>"><?php echo $job->position->title; ?></a> -
+	<li class="type-<?php strtolower($update->updateType); ?>"><a
+		href="<?php echo $job->siteJobRequest->url; ?>"><?php echo $job->position->title; ?></a> -
 		<?php echo $job->locationDescription; ?></li><?php
 }
 ?>
