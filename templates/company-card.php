@@ -1,11 +1,7 @@
-<?php
-$link = esc_url('https://www.linkedin.com/company/' . $profile->id);
-?>
 <div class="linkedin"><div class="card">
 <div id="cartouche">
-	<a href="<?php echo $link; ?>"><img class="picture alignleft" width="50"
-		height="50" src="<?php echo esc_url($profile->squareLogoUrl); ?>"/></a>
-	<div class="name"><a href="<?php echo $link; ?>"><?php echo $profile->name; ?></a></div>
+	<a href="https://www.linkedin.com/company/<?php echo $profile->id; ?>"><img class="picture alignleft" width="50" height="50" src="<?php echo esc_url($profile->squareLogoUrl); ?>"/></a>
+	<div class="name"><a href="https://www.linkedin.com/company/<?php echo $profile->id; ?>"><?php echo $profile->name; ?></a></div>
 </div>
 
 <?php if (isset($profile->description)): ?>
