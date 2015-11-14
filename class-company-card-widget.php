@@ -59,7 +59,7 @@ class WPLinkedInCompanyCardWidget extends WP_Widget {
 		<label for="<?php echo $this->get_field_id('id'); ?>"><?php echo $label; ?></label>
 		<select class="widefat" id="<?php echo $this->get_field_id('id'); ?>" name="<?php echo $this->get_field_name('id'); ?>">
 			<?php foreach ($companies as $i => $company):?>
-			<option value="<?php echo $company->id; ?>" <?php selected($selected, $company->id); ?>><?php echo $company->name; ?></option>
+			<option value="<?php echo $company->id; ?>" <?php selected($selected, $company->id); ?>><?php echo $company->name; ?> (<?php echo $company->id; ?>)</option>
 			<?php endforeach; ?>
 		</select><?php
 		if (!empty($error)) echo $error;

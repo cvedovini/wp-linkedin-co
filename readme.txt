@@ -4,7 +4,7 @@ Contributors: cvedovini
 Donate link: http://paypal.me/vdvn
 Tags: linkedin,resume,recommendations,profile,network updates,companies
 Tested up to: 4.3.1
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,15 +16,18 @@ widgets to display company profiles and company updates on your blog.
 The following shortcodes are available:
 
 * `[li_company_profile]` displays a company profile. You must provide the
-company id using the `id` attribute. Optional attributes `fields` and `lang` to
-override the general settings.
+company page ID using the `id` attribute. Optional attributes `fields` and `lang`
+to override the general settings.
 * `[li_company_card]` displays a company card. You must provide the
-company id using the `id` attribute. Optional attributes `summary_length`,
+company page ID using the `id` attribute. Optional attributes `summary_length`,
  `fields` and `lang` to override the general settings.
 * `[li_company_updates]` displays a company updates. You must provide the
-company id using the `id` attribute. Optional attributes `event_type` (by
+company page ID using the `id` attribute. Optional attributes `event_type` (by
 default the template supports `status-update` and `job-posting`), `start`
 and `count`.
+
+You can find the list of company pages you have access to, with their IDs, on the
+plugin's settings page. Only pages for which you are an administrator can be accessed.
 
 There are also two widgets to display a company profile card and a company
 updates.
@@ -48,6 +51,9 @@ method](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins):
 
 
 == Changelog ==
+
+= Version 1.5.2 =
+- Adding the list of accessible company pages, and IDs, on the settings' page.
 
 = Version 1.5.1 =
 - Small enhancement about the loading process
