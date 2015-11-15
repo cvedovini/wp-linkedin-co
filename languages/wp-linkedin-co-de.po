@@ -10,7 +10,31 @@ msgstr ""
 "X-Generator: GlotPress/1.0-alpha-1100\n"
 "Project-Id-Version: WP LinkedIn for Companies\n"
 
-#: class-admin.php:36
+#: class-admin.php:20
+msgid "Company IDs"
+msgstr "Unternehmen IDs"
+
+#: class-admin.php:49
+msgid "Below is the list of company pages you have access to with their page ID."
+msgstr "Unten ist die Liste der Unternehmensseiten haben Sie Zugriff auf ihre Seiten-ID haben."
+
+#: class-admin.php:50
+msgid "You can use those page IDs with the [li_company_profile], [li_company_card] or [li_company_updates] shortcodes."
+msgstr "Sie können diese Seite IDs mit dem [li_company_profile], [li_company_card] oder [li_company_updates] Shortcodes zu verwenden."
+
+#: class-admin.php:51
+msgid "For example, to show a company profile use [li_company_profile id=\"page ID\"]."
+msgstr "Zum Beispiel, um ein Firmenprofil Verwendung [li_company_profile id = &quot;Seiten-ID&quot;] zeigen."
+
+#: class-admin.php:55
+msgid "You do not have access to any company page."
+msgstr "Sie haben keinen Zugang zu einem Firmenseite."
+
+#: class-admin.php:67
+msgid "If your company page is not listed then make sure your LinkedIn profile is an administrator of this page."
+msgstr "Wenn Ihr Unternehmen Seite nicht aufgeführt ist, dann stellen Sie sicher, Ihr LinkedIn-Profil ist ein Administrator dieser Seite."
+
+#: class-admin.php:43
 msgid "See the <a href=\"%s\" target=\"_blank\">LinkedIn API documentation</a> for the complete list of fields."
 msgstr "Siehe die <a href=\"%s\" target=\"_blank\">LinkedIn API Dokumentation</a> für eine vollständige Liste von Feldern."
 
@@ -1070,27 +1094,27 @@ msgstr "Kongo - Kinshasa"
 msgid "Cook Islands"
 msgstr "Cookinseln"
 
-#: class-admin.php:17
+#: class-admin.php:16
 msgid "Company fields"
 msgstr "Unternehmensfelder"
 
-#: class-admin.php:22
+#: class-admin.php:26
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: class-admin.php:34
+#: class-admin.php:41
 msgid "Comma separated list of fields to show on a company profile."
 msgstr "Kommagetrennte Liste von Feldern, auf einem Firmenprofil zeigen."
 
-#: class-admin.php:35
+#: class-admin.php:42
 msgid "You can overide this setting in the shortcode with the `fields` attribute."
 msgstr "Sie können diese Einstellung in der Shortcode mit dem Attribut `Felder vorgesehen overide."
 
-#: class-admin.php:43
+#: class-admin.php:74
 msgid "The WP LinkedIn for Companies plugin needs the WP LinkedIn plugin to be installed and activated."
 msgstr "Die WP LinkedIn für Firmen-Plugin benötigt die WP LinkedIn-Plugin installiert und aktiviert werden."
 
-#: class-admin.php:45
+#: class-admin.php:76
 msgid "The WP LinkedIn for Company plugin requires at least version %s of the WP-LinkedIn plugin, current installed version is %s"
 msgstr "Die WP LinkedIn für Unternehmen Plugin benötigt mindestens Version%s des WP-Plugin LinkedIn ist derzeit installierte Version%s"
 
@@ -1102,19 +1126,19 @@ msgstr "Company Card"
 msgid "A widget displaying a company card"
 msgstr "Ein Widget Anzeige einer Unternehmenskarte"
 
-#: class-company-card-widget.php:50 class-company-updates-widget.php:52
+#: class-company-card-widget.php:40 class-company-updates-widget.php:42
 msgid "Title:"
 msgstr "Titel:"
 
-#: class-company-card-widget.php:54 class-company-updates-widget.php:56
+#: class-company-card-widget.php:44 class-company-updates-widget.php:46
 msgid "Company:"
 msgstr "Firma:"
 
-#: class-company-card-widget.php:62
+#: class-company-card-widget.php:47
 msgid "Max length of summary (in char):"
 msgstr "Max Länge der Zusammenfassung (in Zeichen):"
 
-#: class-company-card-widget.php:64
+#: class-company-card-widget.php:49
 msgid "Specify '0' to hide the summary."
 msgstr "Geben Sie &quot;0&quot;, um die Zusammenfassung verstecken."
 
@@ -1126,19 +1150,19 @@ msgstr "Unternehmen Updates"
 msgid "A widget displaying a company updates"
 msgstr "Ein Widget Anzeige ein Unternehmen Aktuelles"
 
-#: class-company-updates-widget.php:64
+#: class-company-updates-widget.php:49
 msgid "Number of updates to show:"
 msgstr "Anzahl der Updates, um zu zeigen:"
 
-#: class-company-updates-widget.php:68
+#: class-company-updates-widget.php:53
 msgid "Type of updates to show:"
 msgstr "Art des Updates, um zu zeigen:"
 
-#: class-company-updates-widget.php:70
+#: class-company-updates-widget.php:55
 msgid "Status Updates"
 msgstr "Status Updates"
 
-#: class-company-updates-widget.php:71
+#: class-company-updates-widget.php:56
 msgid "Job Postings"
 msgstr "Stellenausschreibungen"
 
