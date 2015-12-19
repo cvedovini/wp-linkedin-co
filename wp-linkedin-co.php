@@ -5,7 +5,7 @@ Plugin URI: http://vdvn.me/pga
 Description: This plugin enables you to display company's profiles.
 Author: Claude Vedovini
 Author URI: http://vdvn.me/
-Version: 1.5.2
+Version: 1.5.3
 Text Domain: wp-linkedin-co
 Domain Path: /languages
 
@@ -34,13 +34,6 @@ define('LINKEDIN_CO_FIELDS_BASIC', 'id,name,website-url,logo-url,industries,empl
 define('LINKEDIN_CO_FIELDS_DEFAULT', 'description,specialties,locations:(description,is-headquarters,address:(street1,street2,city,state,postal-code,country-code))');
 define('LINKEDIN_CO_FIELDS', get_option('wp-linkedin-co_fields', LINKEDIN_CO_FIELDS_DEFAULT));
 
-if (!defined('WP_LINKEDIN_PROFILE_CACHE_TIMEOUT')) {
-	if (defined('WP_LINKEDIN_CACHETIMEOUT')) {
-		define('WP_LINKEDIN_PROFILE_CACHE_TIMEOUT', WP_LINKEDIN_CACHETIMEOUT);
-	} else {
-		define('WP_LINKEDIN_PROFILE_CACHE_TIMEOUT', 43200); // 12 hours
-	}
-}
 
 include 'class-company-card-widget.php';
 include 'class-company-updates-widget.php';
@@ -132,12 +125,12 @@ function wp_linkedin_get_company_profile($id, $options='id', $lang=LINKEDIN_PROF
 	$profile = $linkedin->get_cache($cache_key);
 
 	if (!$profile) {
-		// No profile, let's try to fetch one.
+		// No profile, let's try to fetch it.
 		$url = "https://api.linkedin.com/v1/companies/$id:($options)";
 		$profile = $linkedin->api_call($url, $lang);
 
 		if (!is_wp_error($profile)) {
-			$linkedin->set_cache($cache_key, $profile);
+			$linkedin->set_cache($cache_key, $profile, WP_LINKEDIN_PROFILE_CACHE_TIMEOUT);
 		}
 	}
 
@@ -151,14 +144,14 @@ function wp_linkedin_get_company_updates($id, $count=10, $start=0, $event_type=f
 	$updates = $linkedin->get_cache($cache_key);
 
 	if (!$updates) {
-		// No updates, let's try to fetch one.
+		// No updates, let's try to fetch them.
 		$url = "https://api.linkedin.com/v1/companies/$id/updates";
 		$params = array('start' => $start, 'count' => $count);
 		if ($event_type) $params['event-type'] = $event_type;
 		$updates = $linkedin->api_call($url, '', $params);
 
 		if (!is_wp_error($updates)) {
-			$linkedin->set_cache($cache_key, $updates);
+			$linkedin->set_cache($cache_key, $updates, WP_LINKEDIN_UPDATES_CACHE_TIMEOUT);
 		}
 	}
 

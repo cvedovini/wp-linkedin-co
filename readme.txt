@@ -4,7 +4,7 @@ Contributors: cvedovini
 Donate link: http://paypal.me/vdvn
 Tags: linkedin,resume,recommendations,profile,network updates,companies
 Tested up to: 4.4
-Stable tag: 1.5.2
+Stable tag: 1.5.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -51,6 +51,9 @@ method](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins):
 
 
 == Changelog ==
+
+= Version 1.5.3 =
+- fixing cache issue
 
 = Version 1.5.2 =
 - Adding the list of accessible company pages, and IDs, on the settings' page.
