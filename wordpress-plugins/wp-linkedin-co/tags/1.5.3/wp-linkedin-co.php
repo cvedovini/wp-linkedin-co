@@ -25,7 +25,7 @@ Domain Path: /languages
 # See the GNU lesser General Public License for more details.
 */
 
-define('WP_LINKEDIN_CO_PLUGIN_VERSION', '1.5.2');
+define('WP_LINKEDIN_CO_PLUGIN_VERSION', '1.5.3');
 define('WP_LINKEDIN_CO_PLUGIN_NAME', 'WP LinkedIn for Companies');
 define('WP_LINKEDIN_CO_DOWNLOAD_ID', 2151);
 define('WP_LINKEDIN_CO_PLUGIN_BASENAME', plugin_basename(__FILE__));
