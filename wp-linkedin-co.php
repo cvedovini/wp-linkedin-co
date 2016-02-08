@@ -5,9 +5,10 @@ Plugin URI: http://vdvn.me/pga
 Description: This plugin enables you to display company's profiles.
 Author: Claude Vedovini
 Author URI: http://vdvn.me/
-Version: 1.5.3
+Version: 1.5.4
 Text Domain: wp-linkedin-co
 Domain Path: /languages
+Network: True
 
 # The code in this plugin is free software; you can redistribute the code aspects of
 # the plugin and/or modify the code under the terms of the GNU Lesser General
@@ -25,7 +26,7 @@ Domain Path: /languages
 # See the GNU lesser General Public License for more details.
 */
 
-define('WP_LINKEDIN_CO_PLUGIN_VERSION', '1.5.3');
+define('WP_LINKEDIN_CO_PLUGIN_VERSION', '1.5.4');
 define('WP_LINKEDIN_CO_PLUGIN_NAME', 'WP LinkedIn for Companies');
 define('WP_LINKEDIN_CO_DOWNLOAD_ID', 2151);
 define('WP_LINKEDIN_CO_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -121,7 +122,7 @@ function wp_linkedin_get_company_admin() {
 
 function wp_linkedin_get_company_profile($id, $options='id', $lang=LINKEDIN_PROFILELANGUAGE) {
 	$linkedin = wp_linkedin_connection();
-	$cache_key = 'profile_company_' . sha1($id.$options.$lang);
+	$cache_key = 'profile_cmpy_' . sha1($id.$options.$lang);
 	$profile = $linkedin->get_cache($cache_key);
 
 	if (!$profile) {
@@ -140,7 +141,7 @@ function wp_linkedin_get_company_profile($id, $options='id', $lang=LINKEDIN_PROF
 
 function wp_linkedin_get_company_updates($id, $count=10, $start=0, $event_type=false) {
 	$linkedin = wp_linkedin_connection();
-	$cache_key = 'updates_company_' . sha1($id.$count.$start.$event_type);
+	$cache_key = 'updates_cmpy_' . sha1($id.$count.$start.$event_type);
 	$updates = $linkedin->get_cache($cache_key);
 
 	if (!$updates) {
