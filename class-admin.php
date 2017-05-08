@@ -72,9 +72,9 @@ class WPLinkedInCoAdmin {
 		if (current_user_can('install_plugins')) {
 			if (!function_exists('wp_linkedin_connection')): ?>
 				<div class="notice notice-error"><p><?php _e('The WP LinkedIn for Companies plugin needs the WP LinkedIn plugin to be installed and activated.', 'wp-linkedin-co'); ?></p></div>
-			<?php elseif (version_compare(WP_LINKEDIN_VERSION, '2.5') < 0):
+			<?php elseif (version_compare(WP_LINKEDIN_VERSION, '2.6') < 0):
 				$format = __('The WP LinkedIn for Company plugin requires at least version %s of the WP-LinkedIn plugin, current installed version is %s', 'wp-linkedin-co');
-				$error = sprintf($format, '2.5', WP_LINKEDIN_VERSION); ?>
+				$error = sprintf($format, '2.6', WP_LINKEDIN_VERSION); ?>
 				<div class="notice notice-error"><p><?php echo $error; ?></p></div>
 			<?php endif;
 		}

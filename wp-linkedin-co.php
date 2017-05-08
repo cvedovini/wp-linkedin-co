@@ -5,7 +5,7 @@ Plugin URI: http://vdvn.me/pga
 Description: This plugin enables you to display company's profiles.
 Author: Claude Vedovini
 Author URI: http://vdvn.me/
-Version: 1.5.4
+Version: 1.5.5
 Text Domain: wp-linkedin-co
 Domain Path: /languages
 Network: True
@@ -26,7 +26,7 @@ Network: True
 # See the GNU lesser General Public License for more details.
 */
 
-define('WP_LINKEDIN_CO_PLUGIN_VERSION', '1.5.4');
+define('WP_LINKEDIN_CO_PLUGIN_VERSION', '1.5.5');
 define('WP_LINKEDIN_CO_PLUGIN_NAME', 'WP LinkedIn for Companies');
 define('WP_LINKEDIN_CO_DOWNLOAD_ID', 2151);
 define('WP_LINKEDIN_CO_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -160,8 +160,8 @@ function wp_linkedin_get_company_updates($id, $count=10, $start=0, $event_type=f
 }
 
 
-function wp_linkedin_company_profile($atts) {
-	$atts = shortcode_atts(array(
+function wp_linkedin_company_profile($atts='') {
+	$atts = wp_linkedin_shortcode_atts(array(
 				'id' => '',
 				'fields' => LINKEDIN_CO_FIELDS,
 				'lang' => LINKEDIN_PROFILELANGUAGE
@@ -180,8 +180,8 @@ function wp_linkedin_company_profile($atts) {
 }
 
 
-function wp_linkedin_company_card($atts) {
-	$atts = shortcode_atts(array(
+function wp_linkedin_company_card($atts='') {
+	$atts = wp_linkedin_shortcode_atts(array(
 				'id' => '',
 				'summary_length' => 200,
 				'fields' => 'square-logo-url,description',
@@ -201,8 +201,8 @@ function wp_linkedin_company_card($atts) {
 }
 
 
-function wp_linkedin_company_updates($atts) {
-	$atts = shortcode_atts(array(
+function wp_linkedin_company_updates($atts='') {
+	$atts = wp_linkedin_shortcode_atts(array(
 				'id' => '',
 				'count' => 10,
 				'start' => 0,
