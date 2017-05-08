@@ -1,0 +1,1207 @@
+# Translation of WP LinkedIn for Companies in Catalan
+# This file is distributed under the same license as the WP LinkedIn for Companies package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-10-05 06:09:52+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
+"Project-Id-Version: WP LinkedIn for Companies\n"
+
+#: class-admin.php:20
+msgid "Company IDs"
+msgstr "Empresa IDs"
+
+#: class-admin.php:49
+msgid "Below is the list of company pages you have access to with their page ID."
+msgstr "A continuació es mostra la llista de les pàgines de la companyia que té accés a la seva pàgina d&#39;identificació."
+
+#: class-admin.php:50
+msgid "You can use those page IDs with the [li_company_profile], [li_company_card] or [li_company_updates] shortcodes."
+msgstr "Podeu utilitzar aquests ID de pàgina amb el [li_company_profile], [li_company_card] o [] li_company_updates codis curts."
+
+#: class-admin.php:51
+msgid "For example, to show a company profile use [li_company_profile id=\"page ID\"]."
+msgstr "Per exemple, per mostrar una utilització perfil de l&#39;empresa [li_company_profile id = &quot;Pàgina d&#39;Identificació&quot;]."
+
+#: class-admin.php:55
+msgid "You do not have access to any company page."
+msgstr "Vostè no té accés a qualsevol pàgina de l&#39;empresa."
+
+#: class-admin.php:67
+msgid "If your company page is not listed then make sure your LinkedIn profile is an administrator of this page."
+msgstr "Si la seva pàgina de l&#39;empresa no és a la llista a continuació, assegureu-vos que el seu perfil de LinkedIn és un administrador d&#39;aquesta pàgina."
+
+#: class-admin.php:43
+msgid "See the <a href=\"%s\" target=\"_blank\">LinkedIn API documentation</a> for the complete list of fields."
+msgstr "Consulteu la <a href=\"%s\" target=\"_blank\">documentació de l&#39;API LinkedIn</a> per veure la llista completa dels camps."
+
+#: countries.php:76
+msgid "Faroe Islands"
+msgstr "Illes Fèroe"
+
+#: countries.php:77
+msgid "Fiji"
+msgstr "Fiji"
+
+#: countries.php:78
+msgid "Finland"
+msgstr "Finlàndia"
+
+#: countries.php:79
+msgid "France"
+msgstr "França"
+
+#: countries.php:80
+msgid "French Guiana"
+msgstr "Guiana francès"
+
+#: countries.php:81
+msgid "French Polynesia"
+msgstr "Polinèsia francès"
+
+#: countries.php:82
+msgid "French Southern Territories"
+msgstr "Territoris Francesos del Sud"
+
+#: countries.php:83
+msgid "French Southern and Antarctic Territories"
+msgstr "Francès Terres australs i Antàrtiques"
+
+#: countries.php:84
+msgid "Gabon"
+msgstr "Gabon"
+
+#: countries.php:85
+msgid "Gambia"
+msgstr "Gàmbia"
+
+#: countries.php:86
+msgid "Georgia"
+msgstr "Geòrgia"
+
+#: countries.php:87
+msgid "Germany"
+msgstr "Alemanya"
+
+#: countries.php:88
+msgid "Ghana"
+msgstr "Ghana"
+
+#: countries.php:89
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#: countries.php:90
+msgid "Greece"
+msgstr "Grècia"
+
+#: countries.php:91
+msgid "Greenland"
+msgstr "Groenlàndia"
+
+#: countries.php:92
+msgid "Grenada"
+msgstr "Granada"
+
+#: countries.php:93
+msgid "Guadeloupe"
+msgstr "Guadalupe"
+
+#: countries.php:94
+msgid "Guam"
+msgstr "Guam"
+
+#: countries.php:95
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: countries.php:96
+msgid "Guernsey"
+msgstr "Guernsey"
+
+#: countries.php:97
+msgid "Guinea"
+msgstr "Guinea"
+
+#: countries.php:98
+msgid "Guinea-Bissau"
+msgstr "Guinea Bissau"
+
+#: countries.php:99
+msgid "Guyana"
+msgstr "Guaiana"
+
+#: countries.php:100
+msgid "Haiti"
+msgstr "Haití"
+
+#: countries.php:101
+msgid "Heard Island and McDonald Islands"
+msgstr "Illa Illes Heard i McDonald"
+
+#: countries.php:102
+msgid "Honduras"
+msgstr "Hondures"
+
+#: countries.php:103
+msgid "Hong Kong SAR China"
+msgstr "Hong Kong República Popular de la Xina"
+
+#: countries.php:104
+msgid "Hungary"
+msgstr "Hongria"
+
+#: countries.php:105
+msgid "Iceland"
+msgstr "Islàndia"
+
+#: countries.php:106
+msgid "India"
+msgstr "Índia"
+
+#: countries.php:107
+msgid "Indonesia"
+msgstr "Indonèsia"
+
+#: countries.php:108
+msgid "Iran"
+msgstr "Iran"
+
+#: countries.php:109
+msgid "Iraq"
+msgstr "Iraq"
+
+#: countries.php:110
+msgid "Ireland"
+msgstr "Irlanda"
+
+#: countries.php:111
+msgid "Isle of Man"
+msgstr "Illa de Man"
+
+#: countries.php:112
+msgid "Israel"
+msgstr "Israel"
+
+#: countries.php:113
+msgid "Italy"
+msgstr "Itàlia"
+
+#: countries.php:114
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#: countries.php:115
+msgid "Japan"
+msgstr "Japó"
+
+#: countries.php:116
+msgid "Jersey"
+msgstr "Jersei"
+
+#: countries.php:117
+msgid "Johnston Island"
+msgstr "Johnston Island"
+
+#: countries.php:118
+msgid "Jordan"
+msgstr "Jordània"
+
+#: countries.php:119
+msgid "Kazakhstan"
+msgstr "Kazakhstan"
+
+#: countries.php:120
+msgid "Kenya"
+msgstr "Kenya"
+
+#: countries.php:121
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: countries.php:122
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#: countries.php:123
+msgid "Kyrgyzstan"
+msgstr "Kirguizistan"
+
+#: countries.php:124
+msgid "Laos"
+msgstr "Laos"
+
+#: countries.php:125
+msgid "Latvia"
+msgstr "Letònia"
+
+#: countries.php:126
+msgid "Lebanon"
+msgstr "Líban"
+
+#: countries.php:127
+msgid "Lesotho"
+msgstr "Lesotho"
+
+#: countries.php:128
+msgid "Liberia"
+msgstr "Libèria"
+
+#: countries.php:129
+msgid "Libya"
+msgstr "Líbia"
+
+#: countries.php:130
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: countries.php:131
+msgid "Lithuania"
+msgstr "Lituània"
+
+#: countries.php:132
+msgid "Luxembourg"
+msgstr "Luxemburg"
+
+#: countries.php:133
+msgid "Macau SAR China"
+msgstr "RAE de Macau de la Xina"
+
+#: countries.php:134
+msgid "Macedonia"
+msgstr "Macedònia"
+
+#: countries.php:135
+msgid "Madagascar"
+msgstr "Madagascar"
+
+#: countries.php:136
+msgid "Malawi"
+msgstr "Malawi"
+
+#: countries.php:137
+msgid "Malaysia"
+msgstr "Malàisia"
+
+#: countries.php:138
+msgid "Maldives"
+msgstr "Maldives"
+
+#: countries.php:139
+msgid "Mali"
+msgstr "Mali"
+
+#: countries.php:140
+msgid "Malta"
+msgstr "Malta"
+
+#: countries.php:141
+msgid "Marshall Islands"
+msgstr "Illes Marshall"
+
+#: countries.php:142
+msgid "Martinique"
+msgstr "Martinica"
+
+#: countries.php:143
+msgid "Mauritania"
+msgstr "Mauritània"
+
+#: countries.php:144
+msgid "Mauritius"
+msgstr "Mauricio"
+
+#: countries.php:145
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#: countries.php:146
+msgid "Metropolitan France"
+msgstr "França metropolitana"
+
+#: countries.php:147
+msgid "Mexico"
+msgstr "Mèxic"
+
+#: countries.php:148
+msgid "Micronesia"
+msgstr "Micronèsia"
+
+#: countries.php:149
+msgid "Midway Islands"
+msgstr "Illes Midway"
+
+#: countries.php:150
+msgid "Moldova"
+msgstr "Moldàvia"
+
+#: countries.php:151
+msgid "Monaco"
+msgstr "Mònaco"
+
+#: countries.php:152
+msgid "Mongolia"
+msgstr "Mongòlia"
+
+#: countries.php:153
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#: countries.php:154
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: countries.php:155
+msgid "Morocco"
+msgstr "Marroc"
+
+#: countries.php:156
+msgid "Mozambique"
+msgstr "Moçambic"
+
+#: countries.php:157
+msgid "Myanmar [Burma]"
+msgstr "Myanmar [Birmània]"
+
+#: countries.php:158
+msgid "Namibia"
+msgstr "Namíbia"
+
+#: countries.php:159
+msgid "Nauru"
+msgstr "Nauru"
+
+#: countries.php:160
+msgid "Nepal"
+msgstr "Nepal"
+
+#: countries.php:161
+msgid "Netherlands"
+msgstr "Països Baixos"
+
+#: countries.php:162
+msgid "Netherlands Antilles"
+msgstr "Antilles Holandeses"
+
+#: countries.php:163
+msgid "Neutral Zone"
+msgstr "Zona Neutral"
+
+#: countries.php:164
+msgid "New Caledonia"
+msgstr "Nova Caledònia"
+
+#: countries.php:165
+msgid "New Zealand"
+msgstr "Nova Zelanda"
+
+#: countries.php:166
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#: countries.php:167
+msgid "Niger"
+msgstr "Níger"
+
+#: countries.php:168
+msgid "Nigeria"
+msgstr "Nigèria"
+
+#: countries.php:169
+msgid "Niue"
+msgstr "Niue"
+
+#: countries.php:170
+msgid "Norfolk Island"
+msgstr "Illa Norfolk"
+
+#: countries.php:171
+msgid "North Korea"
+msgstr "Corea del nord"
+
+#: countries.php:172
+msgid "North Vietnam"
+msgstr "Vietnam del Nord"
+
+#: countries.php:173
+msgid "Northern Mariana Islands"
+msgstr "Illes Marianes del Nord"
+
+#: countries.php:174
+msgid "Norway"
+msgstr "Noruega"
+
+#: countries.php:175
+msgid "Oman"
+msgstr "Oman"
+
+#: countries.php:176
+msgid "Pacific Islands Trust Territory"
+msgstr "Territori Illes Fideïcomís del Pacífic"
+
+#: countries.php:177
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: countries.php:178
+msgid "Palau"
+msgstr "Palau"
+
+#: countries.php:179
+msgid "Palestinian Territories"
+msgstr "Territoris Palestins"
+
+#: countries.php:180
+msgid "Panama"
+msgstr "Panamà"
+
+#: countries.php:181
+msgid "Panama Canal Zone"
+msgstr "Zona del Canal de Panamà"
+
+#: countries.php:182
+msgid "Papua New Guinea"
+msgstr "Papua Nova Guinea"
+
+#: countries.php:183
+msgid "Paraguay"
+msgstr "Paraguai"
+
+#: countries.php:184
+msgid "People's Democratic Republic of Yemen"
+msgstr "República Democràtica Popular del Iemen"
+
+#: countries.php:185
+msgid "Peru"
+msgstr "Perú"
+
+#: countries.php:186
+msgid "Philippines"
+msgstr "Filipines"
+
+#: countries.php:187
+msgid "Pitcairn Islands"
+msgstr "Illes Pitcairn"
+
+#: countries.php:188
+msgid "Poland"
+msgstr "Polònia"
+
+#: countries.php:189
+msgid "Portugal"
+msgstr "Portugal"
+
+#: countries.php:190
+msgid "Puerto Rico"
+msgstr "Puerto Rico"
+
+#: countries.php:191
+msgid "Qatar"
+msgstr "Katar"
+
+#: countries.php:192
+msgid "Romania"
+msgstr "Romania"
+
+#: countries.php:193
+msgid "Russia"
+msgstr "Rússia"
+
+#: countries.php:194
+msgid "Rwanda"
+msgstr "Rwanda"
+
+#: countries.php:195
+msgid "Réunion"
+msgstr "Réunion"
+
+#: countries.php:196
+msgid "Saint Barthélemy"
+msgstr "Sant Bartomeu"
+
+#: countries.php:197
+msgid "Saint Helena"
+msgstr "Santa Helena"
+
+#: countries.php:198
+msgid "Saint Kitts and Nevis"
+msgstr "Sant Cristóbal i Nieves"
+
+#: countries.php:199
+msgid "Saint Lucia"
+msgstr "Santa Llúcia"
+
+#: countries.php:200
+msgid "Saint Martin"
+msgstr "Saint Martin"
+
+#: countries.php:201
+msgid "Saint Pierre and Miquelon"
+msgstr "Sant Pere i Miquelon"
+
+#: countries.php:202
+msgid "Saint Vincent and the Grenadines"
+msgstr "Saint Vincent i les Grenadines"
+
+#: countries.php:203
+msgid "Samoa"
+msgstr "Samoa"
+
+#: countries.php:204
+msgid "San Marino"
+msgstr "Sant Marino"
+
+#: countries.php:205
+msgid "Saudi Arabia"
+msgstr "Arabia Saudita"
+
+#: countries.php:206
+msgid "Senegal"
+msgstr "Senegal"
+
+#: countries.php:207
+msgid "Serbia"
+msgstr "Sèrbia"
+
+#: countries.php:208
+msgid "Serbia and Montenegro"
+msgstr "Sèrbia i Montenegro"
+
+#: countries.php:209
+msgid "Seychelles"
+msgstr "Seychelles"
+
+#: countries.php:210
+msgid "Sierra Leone"
+msgstr "Sierra Leone"
+
+#: countries.php:211
+msgid "Singapore"
+msgstr "Singapur"
+
+#: countries.php:212
+msgid "Slovakia"
+msgstr "Eslovàquia"
+
+#: countries.php:213
+msgid "Slovenia"
+msgstr "Eslovènia"
+
+#: countries.php:214
+msgid "Solomon Islands"
+msgstr "Illes Salomó"
+
+#: countries.php:215
+msgid "Somalia"
+msgstr "Somàlia"
+
+#: countries.php:216
+msgid "South Africa"
+msgstr "sud-Africa"
+
+#: countries.php:217
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "Geòrgia del Sud i les Illes Sandwich del Sud"
+
+#: countries.php:218
+msgid "South Korea"
+msgstr "Corea del Sud"
+
+#: countries.php:219
+msgid "Spain"
+msgstr "Espanya"
+
+#: countries.php:220
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: countries.php:221
+msgid "Sudan"
+msgstr "Sudan"
+
+#: countries.php:222
+msgid "Suriname"
+msgstr "Surinam"
+
+#: countries.php:223
+msgid "Svalbard and Jan Mayen"
+msgstr "Svalbard i Jan Mayen"
+
+#: countries.php:224
+msgid "Swaziland"
+msgstr "Swazilàndia"
+
+#: countries.php:225
+msgid "Sweden"
+msgstr "Suècia"
+
+#: countries.php:226
+msgid "Switzerland"
+msgstr "Suïssa"
+
+#: countries.php:227
+msgid "Syria"
+msgstr "Síria"
+
+#: countries.php:228
+msgid "São Tomé and Príncipe"
+msgstr "Sant Vaig prendre i Príncep"
+
+#: countries.php:229
+msgid "Taiwan"
+msgstr "Taiwan"
+
+#: countries.php:230
+msgid "Tajikistan"
+msgstr "Tadjikistan"
+
+#: countries.php:231
+msgid "Tanzania"
+msgstr "Tanzània"
+
+#: countries.php:232
+msgid "Thailand"
+msgstr "Tailàndia"
+
+#: countries.php:233
+msgid "Timor-Leste"
+msgstr "Timor Oriental"
+
+#: countries.php:234
+msgid "Togo"
+msgstr "Togo"
+
+#: countries.php:235
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#: countries.php:236
+msgid "Tonga"
+msgstr "Tonga"
+
+#: countries.php:237
+msgid "Trinidad and Tobago"
+msgstr "Trinitat i Tobago"
+
+#: countries.php:238
+msgid "Tunisia"
+msgstr "Tunísia"
+
+#: countries.php:239
+msgid "Turkey"
+msgstr "Turquia"
+
+#: countries.php:240
+msgid "Turkmenistan"
+msgstr "Turkmenistan"
+
+#: countries.php:241
+msgid "Turks and Caicos Islands"
+msgstr "Illes Turks i Caicos"
+
+#: countries.php:242
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: countries.php:243
+msgid "U.S. Minor Outlying Islands"
+msgstr "Illes menors allunyades de"
+
+#: countries.php:244
+msgid "U.S. Miscellaneous Pacific Islands"
+msgstr "Diversos nord-americans Illes del Pacífic"
+
+#: countries.php:245
+msgid "U.S. Virgin Islands"
+msgstr "Illes Verges dels EUA"
+
+#: countries.php:246
+msgid "Uganda"
+msgstr "Uganda"
+
+#: countries.php:247
+msgid "Ukraine"
+msgstr "Ucraïna"
+
+#: countries.php:248
+msgid "Union of Soviet Socialist Republics"
+msgstr "Unió de Repúbliques Socialistes Soviètiques"
+
+#: countries.php:249
+msgid "United Arab Emirates"
+msgstr "Emirats Àrabs Units"
+
+#: countries.php:250
+msgid "United Kingdom"
+msgstr "Regne Unit"
+
+#: countries.php:251
+msgid "United States"
+msgstr "Estats Units"
+
+#: countries.php:252
+msgid "Unknown or Invalid Region"
+msgstr "Desconeguda o no vàlida Regió"
+
+#: countries.php:253
+msgid "Uruguay"
+msgstr "Uruguai"
+
+#: countries.php:254
+msgid "Uzbekistan"
+msgstr "Uzbekistan"
+
+#: countries.php:255
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: countries.php:256
+msgid "Vatican City"
+msgstr "Ciutat del Vaticà"
+
+#: countries.php:257
+msgid "Venezuela"
+msgstr "Veneçuela"
+
+#: countries.php:258
+msgid "Vietnam"
+msgstr "Vietnam"
+
+#: countries.php:259
+msgid "Wake Island"
+msgstr "Wake Island"
+
+#: countries.php:260
+msgid "Wallis and Futuna"
+msgstr "Wallis i Futuna"
+
+#: countries.php:261
+msgid "Western Sahara"
+msgstr "Sàhara Occidental"
+
+#: countries.php:262
+msgid "Yemen"
+msgstr "Iemen"
+
+#: countries.php:263
+msgid "Zambia"
+msgstr "Zàmbia"
+
+#: countries.php:264
+msgid "Zimbabwe"
+msgstr "Zimbabwe"
+
+#: countries.php:265
+msgid "Åland Islands"
+msgstr "Illes Åland"
+
+#: countries.php:56
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: countries.php:57
+msgid "Croatia"
+msgstr "Croàcia"
+
+#: countries.php:58
+msgid "Cuba"
+msgstr "Cuba"
+
+#: countries.php:59
+msgid "Cyprus"
+msgstr "Xipre"
+
+#: countries.php:60
+msgid "Czech Republic"
+msgstr "República Txeca"
+
+#: countries.php:61
+msgid "Côte d’Ivoire"
+msgstr "Costa d&#39;Ivori"
+
+#: countries.php:62
+msgid "Denmark"
+msgstr "Dinamarca"
+
+#: countries.php:63
+msgid "Djibouti"
+msgstr "Djibouti"
+
+#: countries.php:64
+msgid "Dominica"
+msgstr "Dominica"
+
+#: countries.php:65
+msgid "Dominican Republic"
+msgstr "República Dominicana"
+
+#: countries.php:66
+msgid "Dronning Maud Land"
+msgstr "Terra de la Reina Maud"
+
+#: countries.php:67
+msgid "East Germany"
+msgstr "Alemanya de l&#39;Est"
+
+#: countries.php:68
+msgid "Ecuador"
+msgstr "Equador"
+
+#: countries.php:69
+msgid "Egypt"
+msgstr "Egipte"
+
+#: countries.php:70
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: countries.php:71
+msgid "Equatorial Guinea"
+msgstr "Guinea Equatorial"
+
+#: countries.php:72
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#: countries.php:73
+msgid "Estonia"
+msgstr "Estònia"
+
+#: countries.php:74
+msgid "Ethiopia"
+msgstr "Etiòpia"
+
+#: countries.php:75
+msgid "Falkland Islands"
+msgstr "Illes Malvines"
+
+#: countries.php:2
+msgid "Afghanistan"
+msgstr "Afganistan"
+
+#: countries.php:3
+msgid "Albania"
+msgstr "Albània"
+
+#: countries.php:4
+msgid "Algeria"
+msgstr "Algèria"
+
+#: countries.php:5
+msgid "American Samoa"
+msgstr "Samoa Americana"
+
+#: countries.php:6
+msgid "Andorra"
+msgstr "Andorra"
+
+#: countries.php:7
+msgid "Angola"
+msgstr "Angola"
+
+#: countries.php:8
+msgid "Anguilla"
+msgstr "Anguila"
+
+#: countries.php:9
+msgid "Antarctica"
+msgstr "Antàrtida"
+
+#: countries.php:10
+msgid "Antigua and Barbuda"
+msgstr "Antigua i Barbuda"
+
+#: countries.php:11
+msgid "Argentina"
+msgstr "Argentina"
+
+#: countries.php:12
+msgid "Armenia"
+msgstr "Armènia"
+
+#: countries.php:13
+msgid "Aruba"
+msgstr "Aruba"
+
+#: countries.php:14
+msgid "Australia"
+msgstr "Austràlia"
+
+#: countries.php:15
+msgid "Austria"
+msgstr "Àustria"
+
+#: countries.php:16
+msgid "Azerbaijan"
+msgstr "Azerbaidjan"
+
+#: countries.php:17
+msgid "Bahamas"
+msgstr "Bahames"
+
+#: countries.php:18
+msgid "Bahrain"
+msgstr "Bahrain"
+
+#: countries.php:19
+msgid "Bangladesh"
+msgstr "Bangla Desh"
+
+#: countries.php:20
+msgid "Barbados"
+msgstr "Barbados"
+
+#: countries.php:21
+msgid "Belarus"
+msgstr "Bielorússia"
+
+#: countries.php:22
+msgid "Belgium"
+msgstr "Bèlgica"
+
+#: countries.php:23
+msgid "Belize"
+msgstr "Belize"
+
+#: countries.php:24
+msgid "Benin"
+msgstr "Benín"
+
+#: countries.php:25
+msgid "Bermuda"
+msgstr "Bermuda"
+
+#: countries.php:26
+msgid "Bhutan"
+msgstr "Bhutan"
+
+#: countries.php:27
+msgid "Bolivia"
+msgstr "Bolívia"
+
+#: countries.php:28
+msgid "Bosnia and Herzegovina"
+msgstr "Bòsnia i Hercegovina"
+
+#: countries.php:29
+msgid "Botswana"
+msgstr "Botswana"
+
+#: countries.php:30
+msgid "Bouvet Island"
+msgstr "Illa Bouvet"
+
+#: countries.php:31
+msgid "Brazil"
+msgstr "Brasil"
+
+#: countries.php:32
+msgid "British Antarctic Territory"
+msgstr "Territori Antàrtic Britànic"
+
+#: countries.php:33
+msgid "British Indian Ocean Territory"
+msgstr "Territori Britànic de l&#39;Oceà Índic"
+
+#: countries.php:34
+msgid "British Virgin Islands"
+msgstr "Illes Verges Britàniques"
+
+#: countries.php:35
+msgid "Brunei"
+msgstr "Brunei"
+
+#: countries.php:36
+msgid "Bulgaria"
+msgstr "Bulgària"
+
+#: countries.php:37
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: countries.php:38
+msgid "Burundi"
+msgstr "Burundi"
+
+#: countries.php:39
+msgid "Cambodia"
+msgstr "Cambodja"
+
+#: countries.php:40
+msgid "Cameroon"
+msgstr "Camerun"
+
+#: countries.php:41
+msgid "Canada"
+msgstr "Canadà"
+
+#: countries.php:42
+msgid "Canton and Enderbury Islands"
+msgstr "Cantó i Illes Enderbury"
+
+#: countries.php:43
+msgid "Cape Verde"
+msgstr "Cap Verd"
+
+#: countries.php:44
+msgid "Cayman Islands"
+msgstr "Illes Caiman"
+
+#: countries.php:45
+msgid "Central African Republic"
+msgstr "República Centreafricana"
+
+#: countries.php:46
+msgid "Chad"
+msgstr "Chad"
+
+#: countries.php:47
+msgid "Chile"
+msgstr "Xile"
+
+#: countries.php:48
+msgid "China"
+msgstr "Xina"
+
+#: countries.php:49
+msgid "Christmas Island"
+msgstr "Illa de Nadal"
+
+#: countries.php:50
+msgid "Cocos [Keeling] Islands"
+msgstr "Cocos [] Illes Cocos"
+
+#: countries.php:51
+msgid "Colombia"
+msgstr "Colòmbia"
+
+#: countries.php:52
+msgid "Comoros"
+msgstr "Comores"
+
+#: countries.php:53
+msgid "Congo - Brazzaville"
+msgstr "Congo - Brazzaville"
+
+#: countries.php:54
+msgid "Congo - Kinshasa"
+msgstr "Congo - Kinshasa"
+
+#: countries.php:55
+msgid "Cook Islands"
+msgstr "Illes Cook"
+
+#: class-admin.php:16
+msgid "Company fields"
+msgstr "Camps de la companyia"
+
+#: class-admin.php:26
+msgid "Settings"
+msgstr "Configuració"
+
+#: class-admin.php:41
+msgid "Comma separated list of fields to show on a company profile."
+msgstr "Comma llista de camps separats per mostrar en un perfil de l&#39;empresa."
+
+#: class-admin.php:42
+msgid "You can overide this setting in the shortcode with the `fields` attribute."
+msgstr "Pot sobreescriure aquesta configuració en el 'shortcode' amb l'atribut 'fields'"
+
+#: class-admin.php:74
+msgid "The WP LinkedIn for Companies plugin needs the WP LinkedIn plugin to be installed and activated."
+msgstr "El WP LinkedIn per a Empreses Plugin necessita el plugin WP LinkedIn per a ser instal · lat i activat."
+
+#: class-admin.php:76
+msgid "The WP LinkedIn for Company plugin requires at least version %s of the WP-LinkedIn plugin, current installed version is %s"
+msgstr "El WP LinkedIn per connector d&#39;Empresa requereix almenys la versió%s del connector WP-LinkedIn, versió actual instal·lada és%s"
+
+#: class-company-card-widget.php:6
+msgid "Company Card"
+msgstr "Card Company"
+
+#: class-company-card-widget.php:7
+msgid "A widget displaying a company card"
+msgstr "Un giny que mostra una targeta d&#39;empresa"
+
+#: class-company-card-widget.php:40 class-company-updates-widget.php:42
+msgid "Title:"
+msgstr "Títol:"
+
+#: class-company-card-widget.php:44 class-company-updates-widget.php:46
+msgid "Company:"
+msgstr "Empresa:"
+
+#: class-company-card-widget.php:47
+msgid "Max length of summary (in char):"
+msgstr "Longitud màxima del resum (en caràcters):"
+
+#: class-company-card-widget.php:49
+msgid "Specify '0' to hide the summary."
+msgstr "Especifiqui '0' per amagar el resum."
+
+#: class-company-updates-widget.php:6
+msgid "Company Updates"
+msgstr "Actualitzacions Empresa"
+
+#: class-company-updates-widget.php:7
+msgid "A widget displaying a company updates"
+msgstr "Un giny que mostra unes actualitzacions de la companyia"
+
+#: class-company-updates-widget.php:49
+msgid "Number of updates to show:"
+msgstr "Nombre de canvis per mostrar:"
+
+#: class-company-updates-widget.php:53
+msgid "Type of updates to show:"
+msgstr "Tipus de canvis per mostrar:"
+
+#: class-company-updates-widget.php:55
+msgid "Status Updates"
+msgstr "Actualitzacions d&#39;estat"
+
+#: class-company-updates-widget.php:56
+msgid "Job Postings"
+msgstr "Col·locacions d&#39;Avisos"
+
+#: templates/company-profile.php:18
+msgid "%s employees"
+msgstr "empleats%s"
+
+#: templates/company-profile.php:29
+msgid "Description"
+msgstr "Descripció"
+
+#: templates/company-profile.php:36
+msgid "Specialties"
+msgstr "Especialitats"
+
+#: templates/company-profile.php:48
+msgid "Headquarters"
+msgstr "Seu"
+
+#: templates/company-updates.php:29
+msgid "No updates"
+msgstr "No hi ha canvis"
+
+#. Plugin Name of the plugin/theme
+msgid "WP LinkedIn for Companies"
+msgstr "LinkedIn WP per a Empreses"
+
+#. Plugin URI of the plugin/theme
+msgid "http://vdvn.me/pga"
+msgstr "http://vdvn.me/pga"
+
+#. Description of the plugin/theme
+msgid "This plugin enables you to display company's profiles."
+msgstr "Aquest plugin us permet visualitzar els perfils d&#39;empresa."
+
+#. Author of the plugin/theme
+msgid "Claude Vedovini"
+msgstr "Claude Vedovini"
+
+#. Author URI of the plugin/theme
+msgid "http://vdvn.me/"
+msgstr "http://vdvn.me/"
