@@ -60,7 +60,7 @@ class WPLinkedInCoAdmin {
 			</style>
 			<table class="companies">
 				<?php foreach ($companies as $i => $company):?>
-				<tr><th><?php echo $company->name; ?></th><td><?php echo $company->id; ?></td></tr>
+				<tr><th><?php echo $company->name; ?></th><td><?php echo $company->id; ?></td><td>[li_company_profile id="<?php echo $company->id; ?>"]</td></tr>
 				<?php endforeach; ?>
 			</table>
 		<?php endif; ?>
