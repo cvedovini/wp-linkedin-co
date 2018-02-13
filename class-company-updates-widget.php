@@ -16,7 +16,11 @@ class WPLinkedInCompanyUpdatesWidget extends WP_Widget {
 				'event_type' => 'status-update'
 			));
 
-		$profile = wp_linkedin_company_updates($instance);
+		$profile = wp_linkedin_company_updates(array(
+				'id' => $instance['id'],
+				'count' => $instance['count'],
+				'event_type' => $instance['event_type']
+			));
 
 		if (!empty($profile)) {
 			$title = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title'], $instance, $this->id_base);
