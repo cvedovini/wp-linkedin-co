@@ -15,16 +15,16 @@ widgets to display company profiles and company updates on your blog.
 
 The following shortcodes are available:
 
-* `[li_company_profile]` displays a company profile. You must provide the
-company page ID using the `id` attribute. Optional attributes `fields` and `lang`
+* *[li_company_profile]* displays a company profile. You must provide the
+company page ID using the *id* attribute. Optional attributes *fields* and *lang*
 to override the general settings.
-* `[li_company_card]` displays a company card. You must provide the
-company page ID using the `id` attribute. Optional attributes `summary_length`,
- `fields` and `lang` to override the general settings.
-* `[li_company_updates]` displays a company updates. You must provide the
-company page ID using the `id` attribute. Optional attributes `event_type` (by
-default the template supports `status-update` and `job-posting`), `start`
-and `count`.
+* *[li_company_card]* displays a company card. You must provide the
+company page ID using the *id* attribute. Optional attributes *summary_length*,
+ *fields* and *lang* to override the general settings.
+* *[li_company_updates]* displays a company updates. You must provide the
+company page ID using the *id* attribute. Optional attributes *event_type* (by
+default the template supports *status-update* and *job-posting*), *start*
+and *count*.
 
 You can find the list of company pages you have access to, with their IDs, on the
 plugin's settings page. Only pages for which you are an administrator can be accessed.
@@ -44,7 +44,7 @@ License purchase includes 1 year of product support and updates.
 This plugin follows the [standard WordPress installation
 method](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins):
 
-1. Upload the `wp-linkedin-co` folder to the `/wp-content/plugins/` directory
+1. Upload the *wp-linkedin-co* folder to the */wp-content/plugins/* directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Go to the plugin's settings page, enter your license key in the 'extensions'
 	tab and press the 'Save Changes' button
@@ -79,7 +79,7 @@ method](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins):
 
 = Version 1.3 =
 
-- Added missing `esc_url` in the templates
+- Added missing *esc_url* in the templates
 - Removed everything related to products
 
 = Version 1.2 =
